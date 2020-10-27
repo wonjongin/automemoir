@@ -5,22 +5,17 @@ import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
-import javafx.scene.Group;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
-import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
-import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
-import javafx.stage.DirectoryChooser;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 
 import java.io.File;
 import java.time.LocalDate;
-import java.util.Optional;
 
 import static automemoirs.ControlHWP.*;
 
@@ -123,6 +118,7 @@ public class MainApp extends Application {
         alertInfo.setContentText("저장이 완료되었습니다.");
 
         // 함수들
+
         // 종료 버튼
         btnExit.setOnAction(new EventHandler<ActionEvent>() {
             @Override
@@ -141,7 +137,7 @@ public class MainApp extends Application {
                 try {
                     createHWP(savePath);
                 } catch (Exception e) {
-//                    e.printStackTrace();
+                    // e.printStackTrace();
                     alertError.showAndWait();
                 }
                 String title = textFieldTitle.getText();
@@ -151,10 +147,9 @@ public class MainApp extends Application {
                 String time = textFieldTime.getText();
                 try {
                     writeHWP(savePath, title, date, time, place, desc);
-//                    readPropHWP(savePath);
                     alertInfo.showAndWait();
                 } catch (Exception e) {
-                    e.printStackTrace();
+                    // e.printStackTrace();
                     alertError.showAndWait();
                 }
             }
