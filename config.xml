@@ -1,0 +1,90 @@
+<!--
+  Bold elements are required.
+  Underlined values are the default when the element is not specified.
+  %VAR% expands environment/special variables and registry keys.
+-->
+<launch4jConfig>
+    <headerType>gui</headerType>
+    <outfile>automemoirs.exe</outfile>
+    <jar>build/libs/automemoirs-1.0-SNAPSHOT.jar</jar>
+    <dontWrapJar>false</dontWrapJar>
+    <errTitle>application name</errTitle>
+    <downloadUrl>http://java.com/download</downloadUrl>
+    <supportUrl>http://nanobyte.iptime.org</supportUrl>
+    <cmdLine>text</cmdLine>
+    <chdir>path</chdir>
+    <priority>normal</priority>
+    <stayAlive>false</stayAlive>
+    <restartOnCrash>false</restartOnCrash>
+<!--    <icon>file</icon>-->
+<!--    <obj>header object file</obj>-->
+<!--    ...-->
+<!--    <lib>w32api lib</lib>-->
+<!--    ...-->
+<!--    <var>var=text (%VAR%)</var>-->
+<!--    ...-->
+    <classPath>
+        <mainClass>automemoirs.MainApp</mainClass>
+        <cp>%VAR%</cp>
+        ...
+    </classPath>
+    <singleInstance>
+        <mutexName>AutoMemoirs</mutexName>
+        <windowTitle>AutoMemoirs</windowTitle>
+    </singleInstance>
+    <jre>
+        <!-- Specify path or minVersion or both. -->
+        <path>%VAR%</path>
+<!--        <bundledJre64Bit>true|false</bundledJre64Bit>-->
+<!--        <bundledJreAsFallback>true|false</bundledJreAsFallback>-->
+        <minVersion>1.11.0</minVersion>
+<!--        <maxVersion>1.x.x[_xxx]|xxx[.xxx[.xxx]]</maxVersion>-->
+<!--        <jdkPreference>jreOnly|preferJre|preferJdk|jdkOnly</jdkPreference>-->
+<!--        <runtimeBits>64|64/32|32/64|32</runtimeBits>-->
+        <!-- Heap sizes in MB and % of available memory. -->
+<!--        <initialHeapSize>MB</initialHeapSize>-->
+<!--        <initialHeapPercent>%</initialHeapPercent>-->
+<!--        <maxHeapSize>MB</maxHeapSize>-->
+<!--        <maxHeapPercent>%</maxHeapPercent>-->
+<!--        <opt>text (%VAR%)</opt>-->
+        ...
+    </jre>
+    <splash>
+        <file>img/splash.bmp</file>
+<!--        <waitForWindow>true|false</waitForWindow>-->
+<!--        <timeout>seconds [60]</timeout>-->
+<!--        <timeoutErr>true|false</timeoutErr>-->
+    </splash>
+    <versionInfo>
+        <fileVersion>1.0.0.0</fileVersion>
+        <txtFileVersion>1.0.0.0</txtFileVersion>
+        <fileDescription>AutoMemoirs</fileDescription>
+        <copyright>MIT</copyright>
+        <productVersion>1.0.0.0</productVersion>
+        <txtProductVersion>1.0.0.0</txtProductVersion>
+        <productName>automemoirs</productName>
+        <companyName>NB</companyName>
+        <internalName>automemoirs</internalName>
+        <originalFilename>automemoirs.exe</originalFilename>
+<!--        <trademarks>text</trademarks>-->
+<!--        <language>-->
+<!--            ALBANIAN|ARABIC|BAHASA|DUTCH_BELGIAN|FRENCH_BELGIAN|BULGARIAN|-->
+<!--            FRENCH_CANADIAN|CASTILIAN_SPANISH|CATALAN|CROATO_SERBIAN_LATIN|-->
+<!--            CZECH|DANISH|DUTCH|ENGLISH_UK|ENGLISH_US|FINNISH|FRENCH|GERMAN|-->
+<!--            GREEK|HEBREW|HUNGARIAN|ICELANDIC|ITALIAN|JAPANESE|KOREAN|-->
+<!--            NORWEGIAN_BOKMAL|NORWEGIAN_NYNORSK|POLISH|PORTUGUESE_BRAZIL|-->
+<!--            PORTUGUESE_PORTUGAL|RHAETO_ROMANIC|ROMANIAN|RUSSIAN|-->
+<!--            SERBO_CROATIAN_CYRILLIC|SIMPLIFIED_CHINESE|SLOVAK|SPANISH_MEXICO|-->
+<!--            SWEDISH|FRENCH_SWISS|GERMAN_SWISS|ITALIAN_SWISS|THAI|-->
+<!--            TRADITIONAL_CHINESE|TURKISH|URDU-->
+<!--        </language>-->
+    </versionInfo>
+    <messages>
+        <startupErr>시작 중 에러가 발생했습니다.</startupErr>
+        <bundledJreErr>자바에서 에러가 발생했습니다.</bundledJreErr>
+        <jreVersionErr>자바 버전이 맞지 않습니다.</jreVersionErr>
+        <launcherErr>실행 중 에러가 발생했습니다.</launcherErr>
+        <!-- Used by console header only. -->
+        <instanceAlreadyExistsMsg>이미 실행 중 입니다.</instanceAlreadyExistsMsg>
+    </messages>
+</launch4jConfig>
