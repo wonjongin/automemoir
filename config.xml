@@ -8,7 +8,7 @@
     <outfile>automemoirs.exe</outfile>
     <jar>build/libs/automemoirs-1.0-SNAPSHOT-all.jar</jar>
     <dontWrapJar>false</dontWrapJar>
-    <errTitle>application name</errTitle>
+    <errTitle>AutoMemoirs ERROR</errTitle>
     <downloadUrl>http://java.com/download</downloadUrl>
     <supportUrl>http://nanobyte.iptime.org</supportUrl>
     <cmdLine>text</cmdLine>
