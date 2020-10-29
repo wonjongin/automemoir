@@ -6,13 +6,13 @@
 <launch4jConfig>
     <headerType>gui</headerType>
     <outfile>automemoirs.exe</outfile>
-    <jar>build/libs/automemoirs-1.0-SNAPSHOT.jar</jar>
+    <jar>build/libs/automemoirs-1.0-SNAPSHOT-all.jar</jar>
     <dontWrapJar>false</dontWrapJar>
     <errTitle>application name</errTitle>
     <downloadUrl>http://java.com/download</downloadUrl>
     <supportUrl>http://nanobyte.iptime.org</supportUrl>
     <cmdLine>text</cmdLine>
-    <chdir>path</chdir>
+    <chdir>.</chdir>
     <priority>normal</priority>
     <stayAlive>false</stayAlive>
     <restartOnCrash>false</restartOnCrash>
@@ -24,7 +24,7 @@
 <!--    <var>var=text (%VAR%)</var>-->
 <!--    ...-->
     <classPath>
-        <mainClass>automemoirs.MainApp</mainClass>
+        <mainClass>automemoirs.Launcher</mainClass>
         <cp>%VAR%</cp>
         ...
     </classPath>
@@ -80,11 +80,11 @@
 <!--        </language>-->
     </versionInfo>
     <messages>
-        <startupErr>시작 중 에러가 발생했습니다.</startupErr>
-        <bundledJreErr>자바에서 에러가 발생했습니다.</bundledJreErr>
-        <jreVersionErr>자바 버전이 맞지 않습니다.</jreVersionErr>
-        <launcherErr>실행 중 에러가 발생했습니다.</launcherErr>
+        <startupErr>Start up Error</startupErr>
+        <bundledJreErr>JRE  Error</bundledJreErr>
+        <jreVersionErr>JRE Version Error</jreVersionErr>
+        <launcherErr>Launch Error</launcherErr>
         <!-- Used by console header only. -->
-        <instanceAlreadyExistsMsg>이미 실행 중 입니다.</instanceAlreadyExistsMsg>
+        <instanceAlreadyExistsMsg>Instance Already Exist</instanceAlreadyExistsMsg>
     </messages>
 </launch4jConfig>
