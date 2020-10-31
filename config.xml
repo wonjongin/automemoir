@@ -25,7 +25,7 @@
 <!--    ...-->
     <classPath>
         <mainClass>automemoirs.Launcher</mainClass>
-        <cp>%VAR%</cp>
+        <cp>build/libs/automemoirs-1.0-SNAPSHOT-all.jar</cp>
         ...
     </classPath>
     <singleInstance>
@@ -34,10 +34,11 @@
     </singleInstance>
     <jre>
         <!-- Specify path or minVersion or both. -->
-        <path>%VAR%</path>
+        <path>../jre11/jdk-11.0.9+11-jre/</path>
+        <!-- JRE 폴더까지만 인 듯 (bin 위에) -->
 <!--        <bundledJre64Bit>true|false</bundledJre64Bit>-->
 <!--        <bundledJreAsFallback>true|false</bundledJreAsFallback>-->
-        <minVersion>1.11.0</minVersion>
+        <minVersion>11</minVersion>
 <!--        <maxVersion>1.x.x[_xxx]|xxx[.xxx[.xxx]]</maxVersion>-->
 <!--        <jdkPreference>jreOnly|preferJre|preferJdk|jdkOnly</jdkPreference>-->
 <!--        <runtimeBits>64|64/32|32/64|32</runtimeBits>-->

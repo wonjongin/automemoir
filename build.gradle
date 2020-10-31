@@ -4,6 +4,7 @@ plugins {
     id 'org.openjfx.javafxplugin' version '0.0.9'
     id 'edu.sc.seis.launch4j' version '2.4.8'
     id 'com.github.johnrengelman.shadow' version '6.1.0'
+    id 'edu.sc.seis.macAppBundle' version '2.1.0'
 }
 mainClassName = 'automemoirs.Launcher'
 group 'org.example'
@@ -33,7 +34,7 @@ javafx {
     modules = [ 'javafx.controls' ]
 }
 launch4j {
-    mainClassName 'automemoirs.Launcher'
+    mainClassName = 'automemoirs.Launcher'
     outfile = 'AutoMemoirs.exe'
 //    icon = "${projectDir}/icons/myApp.ico}"
 
@@ -65,4 +66,12 @@ shadowJar {
     manifest {
         inheritFrom project.tasks.testJar.manifest
     }
+}
+
+macAppBundle {
+    mainClassName = 'automemoirs.Launcher'
+    // icon = "myIcon.icns"
+    bundleJRE = true
+    javaProperties.put("apple.laf.useScreenMenuBar", "true")
+    // backgroundImage = "doc/macbackground.png"
 }

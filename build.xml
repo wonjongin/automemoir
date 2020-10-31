@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="AutoMemoirs" default="default" basedir=".">      
+<property environment="env" />  
+    <!-- <import file="nbproject/build-impl.xml"/> -->
+
+    <taskdef name="bundleapp"
+             classname="automemoirs.Launcher"   
+             classpath="build/libs/automemoirs-1.0-SNAPSHOT-all.jar" />
+
+    <target name="bundle">
+        <bundleapp outputdirectory="dist"
+            name="AutoMemoirs"
+            displayname="AutoMemoirs"
+            identifier="automemoirs.Launcher"
+            mainclassname="automemoirs.Launcher">
+            <classpath file="build/libs/automemoirs-1.0-SNAPSHOT-all.jar" />
+            <runtime dir="${env.JAVA_HOME}" />
+        </bundleapp>
+    </target>
+
+</project>
