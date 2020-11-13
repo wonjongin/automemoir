@@ -68,10 +68,10 @@ shadowJar {
     }
 }
 
-macAppBundle {
-    mainClassName = 'automemoirs.Launcher'
-    // icon = "myIcon.icns"
-    bundleJRE = true
-    javaProperties.put("apple.laf.useScreenMenuBar", "true")
-    // backgroundImage = "doc/macbackground.png"
-}
+// macAppBundle {
+//     mainClassName = 'automemoirs.Launcher'
+//     // icon = "myIcon.icns"
+//     bundleJRE = true
+//     javaProperties.put("apple.laf.useScreenMenuBar", "true")
+//     // backgroundImage = "doc/macbackground.png"
+// }
